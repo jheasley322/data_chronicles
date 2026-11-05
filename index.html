@@ -26,6 +26,7 @@
 html, body { height: 100%; }
 body {
   background: var(--desk); color: var(--ink); font: 16px/1.35 var(--body);
+  font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; /* Pixelify turns fi into a glyph that reads as A */
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
   padding-block: 10px; box-sizing: border-box; overflow-x: hidden;
 }
@@ -77,9 +78,9 @@ i b { display: block; height: 100%; width: 0; transition: width .2s linear; }
 .boxart { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); height: min(512px, 84%); image-rendering: pixelated; box-shadow: 6px 6px 0 var(--hot); }
 .eyebrow { margin: 0; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
 h1 { margin: 0; font: 700 clamp(44px, 12vw, 92px)/.86 var(--display); letter-spacing: .02em; color: var(--paper); text-shadow: 4px 4px 0 var(--hot); }
-.series { margin: 6px 0 2px; font: 700 18px/1 var(--display); letter-spacing: .18em; text-transform: uppercase; color: var(--paper); opacity: .85; }
+.series { margin: 6px 0 2px; font: 18px/1 var(--body); letter-spacing: .18em; text-transform: uppercase; color: var(--paper); opacity: .85; }
 .subtitle { margin: 6px 0 0; font: 700 clamp(20px, 4vw, 30px)/1.1 var(--display); color: var(--gold); }
-.subtitle span { color: var(--paper); opacity: .55; font-size: .7em; }
+.subtitle span { color: var(--paper); opacity: .6; font: .7em var(--body); }
 .tag { margin: 4px 0 0; }
 .keys { margin: auto 0 0; font-size: 13px; opacity: .8; }
 #titlemenu .panel { background: transparent; border: 0; padding: 0; color: inherit; max-height: none; width: auto; position: static; }
